@@ -1,9 +1,6 @@
 package edu.francol11.proyecto_java.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "INVOICE_DETAILS")
@@ -20,6 +17,7 @@ public class InvoiceDetails {
     }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "INVOICE_ID")
     private int invoiceId;
     @Column(name = "INVOICE_DETAIL_ID")

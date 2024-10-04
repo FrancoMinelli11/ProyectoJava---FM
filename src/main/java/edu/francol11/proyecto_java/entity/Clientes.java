@@ -1,9 +1,6 @@
 package edu.francol11.proyecto_java.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "CLIENTES")
@@ -20,6 +17,7 @@ public class Clientes {
     }
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private int id;
     @Column(name = "NOMBRE")
